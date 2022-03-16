@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --color1: #ff9191;
+  --color2: #ffab7c;
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-hover: #ffc300;
+  --back-cegielki: #f8edeb;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+  min-height: 300px;
+}
+
+.main-head-wrapper {
+  grid-area: header;
+}
+
+.content-podopieczni {
+  grid-area: content-podopieczni;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+.dane-fund-podop {
+  grid-area: dane;
+}
+.dogcard {
+  grid-area: dogcard;
+}
+.cards-dogs {
+  grid-area: card-dogs;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* grid-row: auto; */
+  grid-template-areas:
+    "header header "
+    "sidebar content-podopieczni ";
+}
+
+.cards-dogs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.main-head-wrapper {
+  position: relative;
+  background: url(cegielkitlo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  /* width: 100vw; */
+  padding-top: 0;
+}
+
+.main-head {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  z-index: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.main-head > h1 {
+  font-size: 90px !important;
+  color: white !important;
+  opacity: 0.5;
+  margin-bottom: -1rem;
+}
+
+.short-text-podopieczni {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color1);
+  font-weight: 700;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  /* padding-top: 0rem; */
+}
+.content-podopieczni {
+  background-color: var(--back-cegielki);
+}
+
+.sidebar {
+  /* height: 300vh; */
+  width: 100%;
+  padding-bottom: 0;
+}
+.dark-overlay-podop {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(dog2.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  /* TO ZMIENIONE */
+  height: 100vh;
+  /* padding: 1rem 4rem 1rem 4rem; */
+}
+.dane-fund-podop > h2 {
+  color: var(--back-cegielki);
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.dane-fund-podop > p {
+  color: white;
+  width: 50vh;
+  margin: 1rem;
+  padding: 0rem 0.5rem;
+}
+.dane-fund-podop > p > span {
+  color: var(--color1);
+}
+
+.content-podopieczni > p {
+  padding: 0.5rem 0.7rem;
+  text-align: justify;
+}
+.content-podopieczni > h1 {
+  padding: 0.5rem 0.7rem;
+}
+
+.cards-dogs {
+  background-color: var(--back-cegielki);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header  "
+      "content-podopieczni "
+      "sidebar ";
+    grid-row: auto;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  .main-head > h1 {
+    font-size: 2rem !important;
+  }
+  .short-text-podopieczni {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+  .sidebar {
+    padding-bottom: 0;
+    margin-bottom: 0px;
+  }
+  .dark-overlay-podop {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sidebar {
+    height: 300vh;
+  }
+  .dark-overlay-podop {
+    height: 300vh;
+  }
+}

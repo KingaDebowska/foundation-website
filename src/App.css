@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --color1: #ff9191;
+  --color2: #ffab7c;
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-hover: #ffc300;
+
+  --back-cegielki: #f8edeb;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+}
+
+/* *********NAVBAR********** */
+nav {
+  /* żeby particles nie nachodziły na navbar */
+  z-index: 2;
+}
+
+/* ********MENU LINKS******** */
+nav a.nav-link {
+  /* font-weight: 500; */
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+/* nav ul li {
+  text-transform: uppercase;
+} */
+
+.navbar-nav > li > a {
+  color: var(--color1) !important;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  border-top: 0.05rem solid var(--primary-dark);
+}
+
+.navbar-brand {
+  max-width: 17.25rem;
+  padding: 0 !important;
+}
+/* jest active żeby się zmieniało mimo że jest kliknięte */
+.navbar-nav > li > a.active:focus {
+  border-top: 0.05rem solid var(--color2);
+}
+
+/* po najechaniu pojawia się border-top */
+.navbar-nav > li > a:hover {
+  border-top: 0.05rem solid var(--color2);
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0rem !important;
+}
+.navbar-toggler:hover {
+  background-color: var(--color2);
+}
+
+/* ******************HEADER********* */
+.header-wraper {
+  position: relative;
+  background: url(dog1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* margin-top: -30px; */
+  padding-top: 0;
+}
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--color2);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.5rem !important;
+  }
+  .typed-text {
+    font-size: 1.7rem !important;
+  }
+}
+
+/* ****TYPED-TEXT**** */
+.typed-text {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.main-info > h1 {
+  /* margin-top: 150px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  /* czarne tło za napisem, width rozciąga pasek na szerokośc ekranu */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.btn {
+  margin-top: 1rem;
+  color: var(--color1) !important;
+  border-color: var(--color2) !important;
+}
+.btn:hover {
+  background-color: var(--color2) !important;
+  color: white !important;
+}
+
+/* *********PARTICLES*********** */
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
+}
+
+/* **********CEGIELKI********** */
+
+.cegielki-wraper {
+  position: relative;
+  background: url(cegielkitlo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  padding-top: 0;
+}
+.cegielki-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  z-index: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.cegielki-info > h1 {
+  font-size: 90px !important;
+  color: white !important;
+  opacity: 0.5;
+  margin-bottom: -1rem;
+}
+
+.contain {
+  width: 100vw;
+}
+.row {
+  width: 100vw;
+  height: 100vh;
+
+  /* padding-right: 1rem; */
+}
+.col-lg-3 {
+  /* background: url(dog2.jpeg) no-repeat;
+  background-size: cover; */
+  /* background-position: left; */
+  height: 150vh;
+  width: 100%;
+  padding-bottom: 0;
+}
+.dark-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(dog2.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 150vh;
+  /* padding: 1rem 4rem 1rem 4rem; */
+}
+.dane-fundacji > h2 {
+  color: var(--back-cegielki);
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.dane-fundacji > p {
+  color: white;
+  width: 50vh;
+  margin: 1rem;
+  padding: 0rem 0.5rem;
+}
+.dane-fundacji > p > span {
+  color: var(--color1);
+}
+
+.col-lg-9 {
+  background-color: var(--back-cegielki);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding-top: 20px; */
+}
+.second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  text-align: center;
+}
+
+.typed-text-cegielki {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color1);
+  font-weight: 700;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  /* padding-top: 0rem; */
+}
+
+/* *************MEDIA***************** */
+
+@media (max-width: 576px) {
+  .first-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 760px) {
+  .first-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .typed-text-cegielki {
+    font-size: 1rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-self: center !important;
+  }
+  .dark-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(dog2.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+  }
+}
+@media (width: 1024px) {
+  .dane-fundacji > h2,
+  p {
+    padding: 1rem 0.5rem;
+  }
+  /* .first-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-row {
+    flex-direction: column;
+    align-items: center;
+  } */
+  .kartka {
+    height: 30vh;
+    width: 50vw;
+  }
+}

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --color1: #ff9191;
+  --color2: #ffab7c;
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-hover: #ffc300;
+  --back-cegielki: #f8edeb;
+  /* --back-galeria: #343a40; */
+  --back-galeria: #212529;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+  min-height: 300px;
+}
+
+.main-head-wrapper-galeria {
+  grid-area: header;
+}
+.content-galeria {
+  grid-area: content-galeria;
+}
+
+.wrapper-galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header  "
+    "content-galeria";
+}
+.main-head-wrapper-galeria {
+  position: relative;
+  /* justify-content: center;
+  align-items: center; */
+  background: url(cegielkitlo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  /* width: 100vw; */
+  padding-top: 0;
+}
+
+.main-head-galeria {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  z-index: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.main-head-galeria > h1 {
+  font-size: 90px !important;
+  color: white !important;
+  opacity: 0.5;
+  margin-bottom: -1rem;
+}
+
+.short-text-galeria {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color1);
+  font-weight: 700;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  /* padding-top: 0rem; */
+}
+.content-galeria {
+  background-color: var(--back-galeria);
+  height: 100vh;
+}
+.carousel {
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 25vw;
+
+  width: 50vw;
+  height: 70vh;
+}
+.car-img {
+  width: auto;
+  height: 500px;
+  max-height: 500px;
+  object-fit: cover;
+}
+.car-caption {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* width: 100vw; */
+  margin: 1rem -6rem !important;
+  padding: 0px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .car-img {
+    width: 100vw;
+    height: 100vh;
+  }
+}
